@@ -44,13 +44,34 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
+---
+### Решение
+---
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/1.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/2.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/3.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/4.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/5.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/6.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/7.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/8.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/9.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/10.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/11.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/12.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/13.png)
 
+---
 ### Задание 2
 Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
 ```
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
+---
+### Решение
+---
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/14.png)
 
 
 ## Дополнительные задания (со звёздочкой*)
