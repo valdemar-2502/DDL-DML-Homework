@@ -88,3 +88,74 @@ customer         | customer_id
 3.2. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
+
+---
+### Решение
+---
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/15.png)
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/16.png)
+
+---
+### ИТОГОВАЯ "ПРОСТЫНЯ" СО ВСЕМИ ЗАПРОСАМИ
+---
+
+ ### ЗАДАНИЕ 1
+```
+Создание пользователя
+CREATE USER 'sys_temp'@'%' IDENTIFIED BY 'test';
+
+Просмотр списка пользователей
+SELECT User, Host FROM mysql.user;
+
+Выдача всех прав
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'%';
+FLUSH PRIVILEGES;
+
+Просмотр прав пользователя
+SHOW GRANTS FOR 'sys_temp'@'%';
+
+Смена типа аутентификации
+ALTER USER 'sys_temp'@'%' IDENTIFIED WITH mysql_native_password BY 'test';
+
+Восстановление дампа (выполняется в консоли Docker)
+docker cp ~/sakila-db/sakila-schema.sql mysql-sakila:/tmp/
+docker cp ~/sakila-db/sakila-data.sql mysql-sakila:/tmp/
+SOURCE /tmp/sakila-schema.sql;
+SOURCE /tmp/sakila-data.sql;
+
+Просмотр таблиц базы sakila
+USE sakila;
+SHOW TABLES;
+```
+---
+### ЗАДАНИЕ 2 (Первичные ключи)
+---
+```
+Запрос для получения всех первичных ключей
+SELECT 
+    TABLE_NAME,
+    COLUMN_NAME,
+    CONSTRAINT_NAME
+FROM 
+    INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+WHERE 
+    TABLE_SCHEMA = 'sakila' 
+    AND CONSTRAINT_NAME = 'PRIMARY'
+ORDER BY 
+    TABLE_NAME, ORDINAL_POSITION;
+```
+---
+### ЗАДАНИЕ 3* (Дополнительное)
+---
+```
+Подключиться под root
+docker exec -it mysql-sakila mysql -u root -p
+
+Отзыв глобальных прав и выдача прав только на чтение
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'sys_temp'@'%';
+GRANT SELECT ON sakila.* TO 'sys_temp'@'%';
+FLUSH PRIVILEGES;
+
+Проверка прав после отзыва (для скриншота)
+SHOW GRANTS FOR 'sys_temp'@'%';
+```
