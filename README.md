@@ -73,6 +73,11 @@ customer         | customer_id
 ---
 ![database](https://github.com/valdemar-2502/DDL-DML-Homework/blob/main/screenshots/14.png)
 
+---
+### Ссылка на таблицу в Excel
+![database](https://github.com/valdemar-2502/DDL-DML-Homework/raw/refs/heads/main/Database.xlsx)
+
+---
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
